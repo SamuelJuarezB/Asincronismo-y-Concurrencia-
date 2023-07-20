@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 
 class Program
 {
-    static async Task<byte[]> DownloadImageAsync(string imageUrl)
+    static async Task<byte[]> DownloadImageAsync(string URLImagen)
     {
         using (HttpClient client = new HttpClient())
         {
-            byte[] imageData = await client.GetByteArrayAsync(imageUrl);
+            byte[] imageData = await client.GetByteArrayAsync(URLImagen);
             return imageData;
         }
     }
 
     static async Task Main(string[] args)
     {
-        List<string> imageUrls = new List<string>
+        List<string> URLsImagenes = new List<string>
         {
             "https://media.ambito.com/p/82a335546b26ff4b09c9499dc97a4259/adjuntos/239/imagenes/038/514/0038514704/el-fiat-mobi-easy-es-el-auto-mas-economico-del-mercado-automotor-argentino.jpg",
             "https://i.blogs.es/b1be28/autos-electricos-en-mexico_1/1366_2000.jpg",
@@ -26,7 +26,7 @@ class Program
 
         List<Task<byte[]>> downloadTasks = new List<Task<byte[]>>();
 
-        foreach (string url in imageUrls)
+        foreach (string url in URLsImagenes)
         {
             Task<byte[]> downloadTask = DownloadImageAsync(url);
             downloadTasks.Add(downloadTask);
