@@ -21,7 +21,7 @@ class Program
             "https://media.ambito.com/p/82a335546b26ff4b09c9499dc97a4259/adjuntos/239/imagenes/038/514/0038514704/el-fiat-mobi-easy-es-el-auto-mas-economico-del-mercado-automotor-argentino.jpg",
             "https://i.blogs.es/b1be28/autos-electricos-en-mexico_1/1366_2000.jpg",
             "http://4.bp.blogspot.com/-POO7m1EeCJM/UlQa2fg56VI/AAAAAAAA6-U/d2gUj_Tl51Q/w1200-h630-p-nu/Nissan-Skyline-Tuning_Carros-Modificados-1920x1080.jpg"
-            // Agrega aquí las URLs de las imágenes que deseas descargar
+   
         };
 
         List<Task<byte[]>> downloadTasks = new List<Task<byte[]>>();
@@ -36,7 +36,5 @@ class Program
 
         Console.WriteLine("Todas las imágenes han sido descargadas correctamente.");
 
-        // Accede a los resultados de las descargas utilizando downloadTask.Result
-        // Ejemplo: byte[] imageData = downloadTask.Result;
     }
 }
